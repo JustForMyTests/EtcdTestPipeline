@@ -2,6 +2,7 @@
   (:require
       [TestPipeline.pipeline :as pipeline]
       [ring.server.standalone :as ring-server]
+      [compojure.core :refer [routes]]
       [lambdacd.ui.ui-server :as ui]
       [lambdacd.runners :as runners]
       [lambdacd.util :as util]
@@ -20,14 +21,14 @@
             pipeline (lambdacd/assemble-pipeline pipeline/pipeline-def config)]
             ;; create a Ring handler for the UI
             ;;app (ui/ui-for pipeline)]
-           (lambdacd-git/init-ssh!)
-           (log/info "LambdaCD Home Directory is " home-dir)
-           ;; this starts the pipeline and runs one build after the other.
-           ;; there are other runners and you can define your own as well.
-           (runners/start-one-run-after-another pipeline)
-           ;; start the webserver to serve the UI
-           (ring-server/serve (routes
-                                (ui/ui-for pipeline)
-                                (core/notifications-for pipeline))
-                              {:open-browser? false
-                                   :port 8080})))
+            (lambdacd-git/init-ssh!)
+            (log/info "LambdaCD Home Directory is " home-dir)
+            ;; this starts the pipeline and runs one build after the other.
+            ;; there are other runners and you can define your own as well.
+            (runners/start-one-run-after-another pipeline)
+            ;; start the webserver to serve the UI
+            (ring-server/serve (routes
+                                 (ui/ui-for pipeline)
+                                 (lambdacd-git/notifications-for pipeline))
+                               {:open-browser? false
+                                 :port 8080})))

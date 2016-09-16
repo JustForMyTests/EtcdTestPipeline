@@ -3,6 +3,9 @@
             [lambdacd.steps.manualtrigger :as manualtrigger]
             [lambdacd-git.core :as lambdacd-git]))
 
+(defn ls [args ctx]
+  (shell/bash ctx (:cwd args) "ls"))
+
 ;---------------------------- Git steps ----------------------------------
 
 (def repo-uri "https://github.com/JustForMyTests/EtcdTestPipeline.git")
