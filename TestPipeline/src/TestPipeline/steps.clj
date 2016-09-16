@@ -3,9 +3,6 @@
             [lambdacd.steps.manualtrigger :as manualtrigger]
             [lambdacd-git.core :as lambdacd-git]))
 
-(defn ls [args ctx]
-  (shell/bash ctx (:cwd args) "ls"))
-
 ;---------------------------- Git steps ----------------------------------
 
 (def repo-uri "https://github.com/JustForMyTests/EtcdTestPipeline.git")
@@ -91,6 +88,10 @@
       (str "java -cp \"./IOTest/temp:./IOTest/lib/*\" EtcdTest.IOTest " locations))
   ))
 
+;--------------------------------------- Miscellaneous ---------------------------------------------
+
+(defn ls [args ctx]
+  (shell/bash ctx (:cwd args) "ls"))
 
 (defn some-step-that-echoes-foo [args ctx]
   (shell/bash ctx "/"

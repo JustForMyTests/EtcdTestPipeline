@@ -18,11 +18,8 @@
          manualtrigger/wait-for-manual-trigger   ; Manually start the pipeline to clone the head of the repository
          wait-for-repo)                          ; OR wait for a commit on the repository, which passes down the :revision
        (with-workspace
-         ls
          clone-repo
-         ls
          build-code-files
-         ls
          get-parameters
          start-Etcd-nodes
          fill-data
