@@ -1,0 +1,107 @@
+PI38270 NullPointerException in InvocationContextImpl.configureTarget when destroying an already destroyed bean
+PI42311 EJB interceptors not called intermittently 
+PI45254 Collect more serviceability data for transaction log service
+PI48614 NullPointerExceptions from CDI code
+PI51620 NullPointerException when doing injection with com.ibm.ws.cdi.immediate.ejb.start set to true
+PI54459 Information Disclosure in WebSphere Application Server Liberty CVE-2016-0378
+PI58114 ClassCastException when an equals comparison query is run on an entity with a composite @EmbeddedId
+PI58669 CDI javax.decorator.decorator annotation not working as expected 
+PI58875 Application is started even though there has been a listener exception during application start up
+PI59258 Dynamic Routing fails to recognize the application until Collective Controllers are restarted
+PI60026 Bypass security restrictions in WebSphere Application Server (CVE-2016-0385)
+PI60567 New system property to configure the EJB pool wait timeout
+PI60769 IIOP sslRef mismatch not clear in error message
+PI60893 Deadlock caused by SIP Subscribe
+PI61397 Ensure application scoped context is initalized properly and active during bean preDestroy 
+PI61412 HTTP ACCESS LOGS CREATED UNTAGGED
+PI61548 Potential Denial of Service in WebSphere Application Server if using SIP services (CVE-2016-2960)
+PI61592 Security context not propagated into JCA resource adapter
+PI61645 SOME LIBERTY FIXES ARE NOT SHOWING IN LIBERTY LOG MESSAGES
+PI61651 An uncaught exception in javax.servlet.AsyncListener.onComplete() might cause threads to hang
+PI62392 Login failure if userFilter contains userAccountControl  attribute
+PI62609 When coreThreads and maxThreads are the same value, CWWKE1200W messages, which indicate a hung thread, may appear erroneously
+PI62626 jacc-1.5 feature does not package a separate API jar file even though it exposes the API.
+PI62639 NullPointerException in CDIEJBManagedObjectFactoryImpl.getEjbDescriptor when creating EJB instance to pre-load the bean pool
+PI62640 Collective utility help text for --keystorePassword is incorrect.
+PI62722 ATTEMPTING TO START OR STOP A MEMBER FROM THE LIBERTY ADMIN CENTER RUNNING IN A COLLECTOR ON z/OS RESULTS IN CWWKS2910E.
+PI62861 Server stop runs before the ServletContextListener implementation completes
+PI63135 Custom type conversion is sometimes bypassed in EL 3.0
+PI63193 SRVE8094W might happen even if invokeFlushAfterServiceForStaticFile=false
+PI63212 Reload of web server with Intelligent Management causes CWWKV0008W messages on a Liberty collective controller
+PI63436 Embeddable Liberty command wlp/bin/server fails to run on old bourn shell used by Solaris 5.10
+PI63471 getUserDisplayName returning null when basicRegistry is configured
+PI63520 Parked connection created by PoolManager results in setting a pre-existing client ID to a MQ connection
+PI63542 ArrayIndexOutOfBoundsException may occur when doing a JNDI-lookup to a remote EJB that is located in another cell
+PI63571 AccessControlException: "accessDeclaredMembers" from com.ibm.wsspi.injectionengine.MethodMap.getMethods.
+PI63633 Thread-safety issue in the underlying (Apache) JSF 2.0 code causes WebContainer threads to hang
+PI63709 Application exception thrown from EJB constructor lost when @AroundConstruct interceptors present
+PI63821 Resource reference names starting with java:comp/env are ignored in ibm-ejb-jar-bnd.xml
+PI63871 NullPointerException in  MemoryPersistenceManager
+PI63929 Potential open redirect security vulnerability in WebSphere Application Server Liberty  CVE-2016-3040
+PI63930 WEBSOCKET-1.1 FEATURE DOES NOT WORK IN LIBERTY IMBEDDED IN CICS TS 5.3
+PI63949 When auth-method tag is not used in Liberty a NullPointerException is thrown
+PI64004 The scratchdir JSP attribute is not documented on Liberty
+PI64065 CWWKS9112W: INVALID RUN-AS CONFIGURATION FOR SECURITY-ROLE NAME APPLICATIONROLENAME IN THE APPLICATION APPLICATIONNAME.
+PI64129 CDI applications that inject Validator or ValidatorFactory beans cannot be failed over in a cluster
+PI64195 @PreDestroy methods are not invoked on session invalidation for JavaServer Faces (JSF) javax.faces.bean.ViewScoped beans.
+PI64318 Product validation error when running installUtility install
+PI64374 Race condition with session scoped contexts 
+PI64472 Automatically determine whether a submit or restart should be issued from the batchManager and batchManagerZos utilities.
+PI64494 Timing window in generation of Type Code objects from class TypeDescriptors, causes performance problems during JNDI lookup
+PI64714 JSF message severities always set to ERROR after ValidatorException
+PI64718 Validators are not called when using selectManyCheckbox
+PI64790 Cross-site scripting vulnerability in OpenID Connect client CVE-2016-3042
+PI64806 java.lang.StackOverflowError on WAR
+PI64812 Application ClassLoader leaked during application restart from CDI's RuntimeFactory
+PI64823 zosRequestLogging-1.0 feature does record the SAF mapped user ID in SMF 120 subtype 11 records.
+PI64899 When using the jsf-2.2 and beanValidation-1.1 features an OSGI warning message can be seen.
+PI65127 Deadlock issue in tranlog database
+PI65205 FFDC for TransactionRolledbackException when using UserTransaction in stateful bean ejbRemove method
+PI65244 EJB connection helpers are both null
+PI65333 A JSP error "unresolved compilation problem" is thrown during runtime
+PI65337 Use of CDI interceptors in stateless EJBs causes exceptions to be wrapped in WeldException
+PI65412 Transaction service may fail to log data correctly when its logs are stored in a database and connection failure occurs
+PI65456 Issuing "job.ended" CWWKY0010I message instead of "job.failed" CWWKY0011W message, upon job failure.
+PI65506 Display proper asset list when embedded asset repo is missing during IM modify_add flow
+PI65637 Starting an OSGi Application intermittently causes an endless loop.
+PI65658 LIBERTY Z/OS UNAUTHENTICATED ID EXPERIENCES ICH408I CALLING HTTPSERVLETREQUEST.LOGIN WITH SYNCTOOSTHREAD ENABLED.
+PI65709 Storage leak in subpool 249 key 2 when using the zosLocalAdapters-1.0 feature.
+PI65716 configUtility and collective command line utilities do not support the custom password encryption
+PI65853 PI65853  :: commons-fileupload vulnerability 
+PI66148 OIDC Client Service is not thread safe
+PI66150 LIBERTY SERVER PROCESSES THE START OF WOLA WORKLOAD TOO SLOWLY
+PI66271 When using c:import to import a file that does not exist, an error 500 is received
+PI66354 OAuth provider does not encode non-ASCII characters properly
+PI66423 OraclePreparedStatement.getReturnResultSet and OracleCallableStatement.getCursor fail after unwrapping statement
+PI66424 J2CA7002E is logged when server is stopped while in the process of installing a resource adapter.
+PI66520 A collective controller shared configuration file is removed after it is renamed.
+PI66522 A deploy rule without a defined restart command produces an exception during a deploy operation.
+PI66523 The --createConfigFile option of the collective utility allows the config file to be in the configDropins/defaults directory
+PI66524 The collective utility writes an unnecessary request to edit server.xml.
+PI66565 com.ibm.wsspi.resource.ResourceInfo not provided to ResourceFactory for <resource-env-ref> XML elements
+PI66570 IllegalStateException thrown on server shutdown
+PI66628 The message when the custom password encryption is not available is not acculate.
+PI66866 Memory leak occurs when an application is restarted
+PI66992 z/OS IM offering failed to modify asset due to error 'Failed to load bundle com.ibm.was.determine.job.type'
+PI66993 Health condition is not set to the Liberty server in the Docker container.
+PI67017 Apache Commons Compress was incorrectly added to Liberty's JVM classpath
+PI67028 AccessControlExceptionthrown from AppClassLoader.getResources() call
+PI67070 Customer can get EJBExceptions related to non-persistent EJB Timers during server shutdown
+PI67093 Information disclosure in IBM WebSphere Application Server
+PI67186 The value of FreeConnectionCount on the ConnectionPool MBean is not accurate when in use connections are destroyed
+PI67220 Liberty member in a Docker container ignores metadata defined in the admin-metadata.xml file included in the container.
+PI67221 Docker registry commands in the Docker deploy rule mistakenly prepend the repository with the user name.
+PI67231 Inconsistent installUtility/feature error messages when installing features or depending features not found on repository
+PI67237 AccessControlException issued when an API tries to obtain an internal OSGi service via the kernel service SPIs.
+PI67305 EclipseLink assigns the same object instance to multiple embedded fields
+PI67388 Move up Weld level to 2.3.4.Final from 2.2.16.Final.
+PI67392 dynamicRouting does not have route info for Liberty Docker on initial deployment
+PI67467 An intermittent MalformedURLException is issued during the server shutdown when Java 6 is used and there are permissions defined
+PI67470 ConcurrentModificationException thrown on getServletWrapper when serveServletsByClassname is enabled   
+PI67586 ConcurrentModificationException in org.apache.cxf.jaxrs.JAXRSServiceFactoryBean
+PI67665 Path normalization of configuration variables can cause unwanted modifications
+PI67672 Extended use of remote EJB may cause error mentioning Phaser parties.
+PI67674 Restarting ORB may cause socket bind exception
+PI67719 AccessControlException from JTMThreadFactory, JNDI lookup, and JmsManagedConnectionFactoryImpl
+PI67739 Configuring a non-default ORB may interfere with application client.
+PI67832 FFDC created when a feature is removed from server.xml.

@@ -12,7 +12,7 @@
 (defn wait-for-repo [args ctx]
   (lambdacd-git/wait-for-git ctx repo-uri
                              :ref (str "refs/heads/" repo-branch)
-                             :ms-between-polls (* 60 1000)))       ; Polls repository for new commits every 1000min
+                             :ms-between-polls (* 60 1000)))       ; Polls repository for new commits every min
 
 
 (defn clone-repo [args ctx]

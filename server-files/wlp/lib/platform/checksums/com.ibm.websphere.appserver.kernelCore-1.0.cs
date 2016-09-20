@@ -1,0 +1,26 @@
+#Wed Aug 31 18:57:15 BST 2016
+lib/com.ibm.ws.kernel.feature_1.0.14.jar=31b09e89eb1c36fe72d89424be9a0da0
+lib/com.ibm.ws.org.objectweb.asm.all.5.0_1.0.14.jar=48458d5a65a76b4f0cda0638a3217e0e
+lib/com.ibm.ws.org.apache.aries.jmx.core.whiteboard.1.1.6_1.0.14.jar=fcb4b50f6213217331e7cf841366d823
+lib/com.ibm.ws.org.apache.felix.scr.2.0.6_1.0.14.jar=1cbfa9216f17252f5782b60905a5f8af
+lib/com.ibm.ws.cds.3.0.1_1.0.14.jar=181a625d9107fefd02b9d31eeb50a0e7
+lib/com.ibm.ws.kernel.metatype.helper_1.0.14.jar=7bd366db6c30246926b23f8a9fefb2a0
+lib/com.ibm.ws.event_1.0.14.jar=d2a45e886251d5d8836055cf21c760a9
+lib/org.eclipse.osgi_3.11.0.jar=7878dc6cec30be1bd843447dd8dc000b
+lib/com.ibm.ws.org.apache.aries.util.1.1.2_1.0.14.jar=4f1356e1c73c020a03f867e2b2148cfe
+lib/com.ibm.ws.org.eclipse.equinox.region.1.3.0_1.0.14.jar=62a416c2fd3d76c1229c0fb1cd745dd0
+lib/com.ibm.ws.org.eclipse.equinox.coordinator.1.3.100_1.0.14.jar=69fc4076013954ce5add4b1bbeca0bfd
+lib/com.ibm.ws.jmx_1.0.14.jar=6f6b67fe410eeeeb1b4d4499686caf79
+lib/com.ibm.ws.kernel.service.location_1.1.14.jar=0c7f0612a48a520144994a5c93c7bcec
+lib/com.ibm.ws.diagnostics_1.0.14.jar=e451c233832b3061d1b6244c7eebe23d
+lib/com.ibm.ws.kernel.service_1.3.14.jar=63082b8ea6d56fd57d9315b39d2369d9
+lib/com.ibm.ws.org.apache.aries.jmx.api.1.1.6_1.0.14.jar=464745c3b0f6ac26e91f12c9e6d4a862
+lib/com.ibm.ws.config_1.0.14.jar=4571c28543e71c455feee5af6c2043f8
+lib/platform/kernelCore-1.0.mf=6fb7e1848a1d2c847f474fdb512b2608
+lib/com.ibm.ws.runtime.update_1.0.14.jar=ebb157d30bc9bacdc2687c44b0bf51c9
+lib/com.ibm.ws.kernel.equinox.module_1.0.14.jar=a501d625444994a10432d762083e14cd
+lib/com.ibm.ws.config.ext_1.0.jar=1a76a014505b45c63deee8d4a91d9ea2
+lib/com.ibm.ws.threading_1.1.14.jar=a727bb9c59d796599d28b6f2055c0826
+lib/com.ibm.ws.org.eclipse.equinox.metatype.1.4.200_1.0.14.jar=7dc859a87866bda103bafee5954cb9fb
+lib/com.ibm.ws.crypto.passwordutil_1.0.14.jar=140af9dc6cef8d9dcd86795beca461dc
+lib/com.ibm.ws.kernel.filemonitor_1.0.14.jar=c54952af055cb29eae49c171d7b40de2
