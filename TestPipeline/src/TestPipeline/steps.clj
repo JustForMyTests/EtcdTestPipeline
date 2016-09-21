@@ -31,14 +31,22 @@
 
 
 (defn build-code-files [args ctx]
-  ;Build EtcdTestv2 WAR file
-
-  ;This step compiles FillData.java and IOTest.java
   (shell/bash ctx (:cwd args)
+    ;Build TestEtcdv2 WAR file
+    "jar cvf TestEtcdv2.war ./TestEtcdv2/WebContent/"
+    "mv TestEtcdv2.war ./server-files/wlp/usr/servers/defaultServer/apps/"
+
+    ;This step compiles FillData.java and IOTest.java
     "mkdir -p ./IOTest/temp"
     "javac -d \"./IOTest/temp/\" -cp \"./IOTest/lib/*\" ./IOTest/src/EtcdTest/*"))
 
 ;------------------------ Run Tests -----------------------------
+
+(defn start-server [args ctx]
+  (shell/bash ctx (:cwd args)
+    "echo \"Starting TestEtcdv2 on application server at localhost:9080 ...............\""
+    "./server-files/wlp/bin/server run"))
+
 
 (defn get-parameters [args ctx]
   (manualtrigger/parameterized-trigger {:nodes {:desc "Number of nodes:"}

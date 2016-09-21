@@ -13,6 +13,7 @@
      (with-workspace
        clone-repo
        build-code-files
+       start-server
        get-parameters
        start-Etcd-nodes
        fill-data
