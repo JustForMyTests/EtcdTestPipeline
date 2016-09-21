@@ -12,6 +12,7 @@
        wait-for-repo)                          ; OR wait for a commit on the repository, which passes down the :revision
      (with-workspace
        clone-repo
+       create-a-server
        build-code-files
        start-server
        get-parameters

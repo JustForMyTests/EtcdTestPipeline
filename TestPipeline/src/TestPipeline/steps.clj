@@ -25,18 +25,26 @@
 
 (defn copy-files [args ctx]
   (shell/bash ctx (:cwd args)
-    "echo \"Pulling from repository\""
+    "echo \"Pulling from repository ..............\""
     ;simulate a pull by copying files in "/home/brendanyhy/workspace" into the temporary folder
     (str "cp -R /home/brendanyhy/workspace/. " (:cwd args))))
+
+
+(defn create-a-server [args ctx]
+  (shell/bash ctx (:cwd args)
+    "echo \"Creating a server to run TestEtcdv2 ............\""
+    "./server-files/wlp/bin/server create"))
 
 
 (defn build-code-files [args ctx]
   (shell/bash ctx (:cwd args)
     ;Build TestEtcdv2 WAR file
+    "echo \"Building TestEtcdv2.war file to be run on application server ...............\""
     "jar cvf TestEtcdv2.war ./TestEtcdv2/WebContent/"
     "mv TestEtcdv2.war ./server-files/wlp/usr/servers/defaultServer/apps/"
 
     ;This step compiles FillData.java and IOTest.java
+    "echo \"Compiling FillData.java and IOTest.java which runs the tests ...............\""
     "mkdir -p ./IOTest/temp"
     "javac -d \"./IOTest/temp/\" -cp \"./IOTest/lib/*\" ./IOTest/src/EtcdTest/*"))
 
