@@ -42,6 +42,8 @@
     ;Build TestEtcdv2 WAR file
     "echo \"Building TestEtcdv2.war file to be run on application server ...............\""
     "jar cvf TestEtcdv2.war ./TestEtcdv2/WebContent/"
+    "find TestEtcdv2.war"
+    "find ./server-files/wlp/usr"
     "mv TestEtcdv2.war ./server-files/wlp/usr/servers/defaultServer/apps/"
 
     ;This step compiles FillData.java and IOTest.java
