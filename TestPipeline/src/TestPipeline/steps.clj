@@ -34,6 +34,7 @@
   (shell/bash ctx (:cwd args)
     "echo \"Creating a server to run TestEtcdv2 ............\""
     "./server-files/wlp/bin/server create"
+    "mkdir -p ./apps"
     "mv ./server-files/wlp/server.xml ./server-files/wlp/usr/servers/defaultServer/"))
 
 
