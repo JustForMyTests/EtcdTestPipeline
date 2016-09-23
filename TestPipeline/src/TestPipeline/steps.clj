@@ -58,7 +58,7 @@
 (defn start-server [args ctx]
   (shell/bash ctx (:cwd args)
     "echo \"Starting TestEtcdv2 on application server at localhost:9080 ...............\""
-    "./server-files/wlp/bin/server run"))
+    "./server-files/wlp/bin/server start"))
 
 
 (defn get-parameters [args ctx]
