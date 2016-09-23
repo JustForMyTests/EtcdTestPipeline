@@ -25,7 +25,7 @@ public class IOTest {
 	}
 	final static Control var = new Control();
 	
-	final static String logFile = "/server-files/wlp/usr/servers/defaultServer/TestLog";
+	final static String logFile = "EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/TestLog";
 
 	static class MyThread implements Runnable {
 
