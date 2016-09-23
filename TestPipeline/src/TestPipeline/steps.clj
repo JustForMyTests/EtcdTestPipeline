@@ -27,7 +27,7 @@
   (shell/bash ctx (:cwd args)
     "echo \"Pulling from repository ..............\""
     ;simulate a pull by copying files in "/home/brendanyhy/workspace" into the temporary folder
-    (str "cp -R /home/brendanyhy/workspace/. " (:cwd args))))
+    (str "cp -R /home/brendanyhy/git/EtcdTestPipeline/. " (:cwd args))))
 
 
 (defn create-a-server [args ctx]
@@ -35,7 +35,7 @@
     "echo \"Creating a server to run TestEtcdv2 ............\""
     "./server-files/wlp/bin/server create"
     "mkdir -p ./server-files/wlp/usr/servers/defaultServer/apps"
-    "find ./server-files/wlp/usr"
+    "touch ./server-files/wlp/usr/servers/defaultServer/TestLog"
     "mv ./server-files/wlp/server.xml ./server-files/wlp/usr/servers/defaultServer/"))
 
 
@@ -44,8 +44,6 @@
     ;Build TestEtcdv2 WAR file
     "echo \"Building TestEtcdv2.war file to be run on application server ...............\""
     "jar cvf TestEtcdv2.war ./TestEtcdv2/WebContent/"
-    "find TestEtcdv2.war"
-    "find ./server-files/wlp/usr"
     "mv TestEtcdv2.war ./server-files/wlp/usr/servers/defaultServer/apps/"
 
     ;This step compiles FillData.java and IOTest.java

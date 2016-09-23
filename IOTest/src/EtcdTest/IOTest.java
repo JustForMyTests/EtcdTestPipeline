@@ -2,6 +2,7 @@ package EtcdTest;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.File;
 import java.io.PrintWriter;
 import java.net.URI;
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class IOTest {
 	}
 	final static Control var = new Control();
 	
-	final static String logFile = "EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/TestLog";
+	final static String logFile = "./server-files/wlp/usr/servers/defaultServer/TestLog";
 
 	static class MyThread implements Runnable {
 
@@ -149,9 +150,9 @@ public class IOTest {
 	/***************************          Main         ******************************/
 	
 	public static void main (String[] args) throws Exception {
-		
+		//System.out.println("This file is in " + System.getProperty("user.dir") + " or " + new File(".").getCanonicalPath());
 		// Delete file content in logFile
-		PrintWriter pw = new PrintWriter(logFile);
+		PrintWriter pw = new PrintWriter(new File(logFile).getCanonicalPath());
 		pw.close();
 		
 		//Start threads to run CRUD on the database
@@ -175,7 +176,7 @@ public class IOTest {
 		System.out.println("All threads have finished executing");
 		
 		// Then read from the log file and interpret the results
-		BufferedReader br = new BufferedReader(new FileReader(logFile));
+		BufferedReader br = new BufferedReader(new FileReader(new File(logFile).getCanonicalPath()));
 		// Interpret results
 		ArrayList<LogResponse> allResponses = new ArrayList<LogResponse>();
 		int index = 0;
