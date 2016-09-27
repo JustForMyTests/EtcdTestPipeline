@@ -18,6 +18,7 @@
        get-parameters
        start-Etcd-nodes
        fill-data
+       assert-files
        run-test)
   ))
 

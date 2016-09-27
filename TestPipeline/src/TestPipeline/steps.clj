@@ -96,15 +96,21 @@
     :nodes (:nodes args)))
 
 
-(defn run-test [{cwd :cwd nodes :nodes} ctx]
+(defn assert-files [args ctx]
+  (shell/bash ctx (:cwd args)
+    "cd ./server-files/wlp/usr/servers/defaultServer/"
+    "ls"
+    "gedit TestLog"))
+
+(defn run-test [args ctx]
   (let [locations
-        (case nodes
+        (case (:nodes args)
           "1" "localhost:4001"
           "3" "localhost:4101 localhost:4201 localhost:4301"
           "5" "localhost:4101 localhost:4201 localhost:4301 localhost:4401 localhost:4501"
           "7" "localhost:4101 localhost:4201 localhost:4301 localhost:4401 localhost:4501 localhost:4601 localhost:4701"
           "default")]
-    (shell/bash ctx cwd
+    (shell/bash ctx (:cwd args)
       (str "java -cp \"./IOTest/temp:./IOTest/lib/*\" EtcdTest.IOTest " locations))
   ))
 
