@@ -43,8 +43,9 @@
   (shell/bash ctx (:cwd args)
     ;Build TestEtcdv2 WAR file
     "echo \"Building TestEtcdv2.war file to be run on application server ...............\""
-    "jar cvf TestEtcdv2.war ./TestEtcdv2/WebContent/"
-    "mv TestEtcdv2.war ./server-files/wlp/usr/servers/defaultServer/apps/"
+    ;;"jar cvf TestEtcdv2.war ./TestEtcdv2/WebContent/"
+    ;;"mv TestEtcdv2.war ./server-files/wlp/usr/servers/defaultServer/apps/"
+    "mv ./server-files/wlp/TestEtcdv2.war ./server-files/wlp/usr/servers/defaultServer/apps/"
 
     ;This step compiles FillData.java and IOTest.java
     "echo \"Compiling FillData.java and IOTest.java which runs the tests ...............\""
