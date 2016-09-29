@@ -1,0 +1,14 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      4    9/29/16 11:08:07:440 SGT    9/29/16 11:08:07:705 SGT java.security.PrivilegedActionException com.ibm.ws.config.admin.internal.ConfigurationStore 127
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.0.log
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.2.log
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.4.log
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.6.log
+     1      4    9/29/16 11:08:07:609 SGT    9/29/16 11:08:07:711 SGT java.io.FileNotFoundException com.ibm.ws.config.xml.internal.ConfigUpdater 267
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.1.log
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.3.log
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.5.log
+                                                                            - /home/brendanyhy/git/EtcdTestPipeline/server-files/wlp/usr/servers/defaultServer/logs/ffdc/ffdc_16.09.29_11.08.07.7.log
+------+------+---------------------------+---------------------------+---------------------------

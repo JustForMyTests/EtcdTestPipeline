@@ -35,7 +35,7 @@ public class STSEtcdResponse {
 		nodeLocation = location;
 		isSet = false;
 		System.out.println(System.getProperty("user.dir") + "/TestLog");
-		logFile = "./server-files/wlp/usr/servers/defaultServer/TestLog";
+		logFile = System.getProperty("user.dir") + "/TestLog";
 	}
 	
 	public void setResult(String theResult, long theRelIndex, long theEnd) {
@@ -65,7 +65,7 @@ public class STSEtcdResponse {
 	}
 	
 	public void toLog() throws IOException{
-		BufferedWriter br = new BufferedWriter(new FileWriter(new File(logFile).getCanonicalPath(), true));
+		BufferedWriter br = new BufferedWriter(new FileWriter(logFile, true));
 		
 		JSONObject obj = new JSONObject();
 		obj.put("action", action);
