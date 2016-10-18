@@ -11,7 +11,7 @@ docker run -d -p 4001:4001 -p 2380:2380 --net=host --name etcdSA quay.io/coreos/
  -initial-cluster-token etcd-cluster-SA \
  -initial-cluster etcdSA=http://127.0.0.1:2380
 
-sleep 1.0
+sleep 2
 
 curl http://localhost:4001/v2/keys/vhosts -XPUT -d dir=true
 

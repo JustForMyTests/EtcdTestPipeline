@@ -28,7 +28,7 @@ CLUSTER=${NAME_1}=http://${P2P_1},${NAME_2}=http://${P2P_2},${NAME_3}=http://${P
 THIS_NAME=${NAME_1}
 THIS_PIP=${P2P_1}
 THIS_HIP=${HOST_1}
-sudo docker run -d -p 2480:2480 -p 4101:4101 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
+docker run -d -p 2480:2480 -p 4101:4101 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
     --name ${THIS_NAME} \
     --initial-advertise-peer-urls http://${THIS_PIP} --listen-peer-urls http://${THIS_PIP} \
     --advertise-client-urls http://${THIS_HIP} --listen-client-urls http://${THIS_HIP} \
@@ -39,7 +39,7 @@ sudo docker run -d -p 2480:2480 -p 4101:4101 --net=host --name ${THIS_NAME} quay
 THIS_NAME=${NAME_2}
 THIS_PIP=${P2P_2}
 THIS_HIP=${HOST_2}
-sudo docker run -d -p 2580:2580 -p 4201:4201 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
+docker run -d -p 2580:2580 -p 4201:4201 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
     --name ${THIS_NAME} \
     --initial-advertise-peer-urls http://${THIS_PIP} --listen-peer-urls http://${THIS_PIP} \
     --advertise-client-urls http://${THIS_HIP} --listen-client-urls http://${THIS_HIP} \
@@ -50,7 +50,7 @@ sudo docker run -d -p 2580:2580 -p 4201:4201 --net=host --name ${THIS_NAME} quay
 THIS_NAME=${NAME_3}
 THIS_PIP=${P2P_3}
 THIS_HIP=${HOST_3}
-sudo docker run -d -p 2680:2680 -p 4301:4301 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
+docker run -d -p 2680:2680 -p 4301:4301 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
     --name ${THIS_NAME} \
     --initial-advertise-peer-urls http://${THIS_PIP} --listen-peer-urls http://${THIS_PIP} \
     --advertise-client-urls http://${THIS_HIP} --listen-client-urls http://${THIS_HIP} \
@@ -61,7 +61,7 @@ sudo docker run -d -p 2680:2680 -p 4301:4301 --net=host --name ${THIS_NAME} quay
 THIS_NAME=${NAME_4}
 THIS_PIP=${P2P_4}
 THIS_HIP=${HOST_4}
-sudo docker run -d -p 2780:2780 -p 4401:4401 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
+docker run -d -p 2780:2780 -p 4401:4401 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
     --name ${THIS_NAME} \
     --initial-advertise-peer-urls http://${THIS_PIP} --listen-peer-urls http://${THIS_PIP} \
     --advertise-client-urls http://${THIS_HIP} --listen-client-urls http://${THIS_HIP} \
@@ -72,7 +72,7 @@ sudo docker run -d -p 2780:2780 -p 4401:4401 --net=host --name ${THIS_NAME} quay
 THIS_NAME=${NAME_5}
 THIS_PIP=${P2P_5}
 THIS_HIP=${HOST_5}
-sudo docker run -d -p 2880:2880 -p 4501:4501 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
+docker run -d -p 2880:2880 -p 4501:4501 --net=host --name ${THIS_NAME} quay.io/coreos/etcd:${ETCD_VERSION} \
     --name ${THIS_NAME} \
     --initial-advertise-peer-urls http://${THIS_PIP} --listen-peer-urls http://${THIS_PIP} \
     --advertise-client-urls http://${THIS_HIP} --listen-client-urls http://${THIS_HIP} \
@@ -80,7 +80,7 @@ sudo docker run -d -p 2880:2880 -p 4501:4501 --net=host --name ${THIS_NAME} quay
     --initial-cluster-state ${CLUSTER_STATE} --initial-cluster-token ${TOKEN}
 
 
-sleep 1
+sleep 2
 
 curl http://localhost:4101/v2/keys/vhosts -XPUT -d dir=true
 
